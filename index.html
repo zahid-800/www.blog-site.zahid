@@ -28,522 +28,380 @@
 </head>
 
 <body>
-    <!--Nav page start-->
-    <div class="container-fluid pb-2 nav-bg fixed-top">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#">Company logo</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon bg-light"></span>
+   
+    <!-- header area -->
+    <header>
+        <div class="container-fluid header-bg pt-1">
+            <!-- mobile_show -->
+            <div class="top_header_mobile">
+                <ul id="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><img src="./img/icons8-multiply-26.png" alt="" width="22"></a>
+                    </li>
+                    <li onclick="logInform()" class="nav-item"><a href="#" class="nav-link">LOGIN <i
+                                class="fa-solid fa-angle-down"></i></a>
+                        <form action="form.php" id="frmlogin">
+                            <a href=""><img src="./img/icons8-multiply-26.png" alt="" width="22"></a>
+                            <input class="form-control mt-4" type="email" name="email" id="eml" placeholder="E-mail">
+                            <input class="form-control mt-3" type="password" name="email" id="pswd"
+                                placeholder="Password">
+                            <div class="d-grid gap-3">
+                                <button type="button" class="btn btn-light mt-3">Log-in</button>
+                            </div>
+
+                        </form>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">REGISTER</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link"><i class="fa-solid fa-heart"></i></a></li>
+                    <li class="nav-item "><a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="top_header">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link"><img class="brand"
+                                src="./img/ddl.avif" alt="" width="60"></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-item "><a href="#" class="nav-link">USD $ <i class="fa-solid fa-angle-down"></i></a>
+                        <ul>
+                            <li><a href="#">EURO $</a></li>
+                            <li><a href="#">BDT $</a></li>
+                            <li><a href="#">CAD $</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="logInformmain()" class="nav-item mobile_none"><a href="#" class="nav-link">LOGIN <i
+                                class="fa-solid fa-angle-down"></i></a>
+                        <form action="form.php" id="frmloginmain">
+                            <a href=""><img onclick="logInmain()" src="./img/icons85-multiply-26 .png" alt=""
+                                    width="22"></a>
+                            <input class="form-control mt-4" type="email" name="email" id="eml" placeholder="E-mail">
+                            <input class="form-control mt-3" type="password" name="email" id="pswd"
+                                placeholder="Password">
+                            <div class="d-grid gap-3">
+                                <button type="button" class="btn btn-light mt-3">Log-in</button>
+                            </div>
+
+                        </form>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="#" class="nav-link">REGISTER</a></li>
+                    <li class="nav-item mobile_none"><a href="#" class="nav-link"><i class="fa-solid fa-heart"></i></a>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="#" class="nav-link"><i
+                                class="fa-solid fa-cart-shopping"></i></a></li>
+                    <img class="menu-squared" onclick=showSidebar() src="./img/icons8-menu-squared-50.png" alt=""
+                        width="36">
+                </ul>
+            </div>
+
+
+            <div class="second_header header  pt-3" id="myHeader">
+                <ul class="nav">
+                    <i onclick=showMain() class="fa-solid fa-bars"></i>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">HOME</a></li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">ALL COLLECTIONS <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">SHOP LAYOUT <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item   mobile_none"><a href="" class="nav-link">PAGES <i
+                                class="fa-solid fa-angle-down"></i> </a>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">BLOGS <i
+                                class="fa-solid fa-angle-down"></i></a>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">CONTACT US <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+            </div>
+            <!-- 2nd nav mobile show -->
+            <div class="main_nav ">
+                <ul id="mainnav">
+                    <i onclick=hidemain() class="fa-solid fa-xmark"></i>
+                    <li class="nav-item"><a class="nav-link" href="">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">ALL COLLECTIONS <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="">SHOP LAYOUT <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="">PAGES <i class="fa-solid fa-angle-down"></i> </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="">BLOGS <i class="fa-solid fa-angle-down"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="">CONTACT US <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- main area -->
+
+    <section>
+        <div class="container mt-3">
+            <div class="hero_slide">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/sidebar3.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>Los Angeles</h3>
+                                <p>We had such a great time in LA!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>Chicago</h3>
+                                <p>Thank you, Chicago!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/sidebar2.jpg" alt="New York" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>New York</h3>
+                                <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/sidebar4.jpg" alt="New York" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>New York</h3>
+                                <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/sidebar5.jpg" alt="New York" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>New York</h3>
+                                <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <div class="collapse justify-content-center navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
-                            <a class="nav-link" href="#">Style guide</a>
-                            <a class="nav-link" href="#">Tags</a>
-                            <a class="nav-link" href="#">Authers</a>
-                            <a class="nav-link" href="#">Post <i class="fa-solid fa-angle-down"></i></a>
-                            <a class="nav-link" href="#">Membership</a>
-                            <a class="nav-link" href="#">Contact</a>
-                            <a class="nav-link" href="#">More <i class="fa-solid fa-angle-down"></i></a>
-                            <a class="nav-link" href="#">Register</a>
-                            <div class="membership">
-                                <div class="seachersbar">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
-                                <a class="nav-link" href="#">Sign-In</a>
-                                <button type="button" class="btn btn-primary">Become member</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </nav>
-            </div>
-
-        </div>
-    </div>
-
-    <!---Nav page  end-->
-
-    <!---Hero_area page  start-->
-    <section>
-        <div class="hero_area justify-content-center">
-            <div class="container  mt-5 pt-5">
-                <div class="hero_area_content">
-                    <h1>Hello 👋, we are <span>Bloger</span>, exploring <span>fashion</span>, <span>lifestyle</span> and
-                        health.</h1>
-                    <p>Introducing a modern and sleek theme for Ghost. Perfect for <span>magazine, newsletter,
-                            professional and personal blog</span> publishing.</p>
-                    <button type="button" class="btn hero_area_btn">Join now-it's free</button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-    <!---Hero_area page  end-->
 
-    <!---Features page  end-->
+    <!-- hero area sliade -->
+
     <section>
-        <div class="features">
-            <div class="container pt-5">
-                <div class="features_page">
-                    <h1>Featured posts</h1>
-                    <div class="row g-4">
-                        <div class="col-md-6 hero_area_content_responsive">
-                            <div class="features_img-content">
-                                <div class="feature-block_img">
-                                    <img src="./img/featurespost-left.webp" alt="" class="img-fluid">
-                                </div>
-                                <div class="travel">Travel</div>
-                                <div class="feature-block_img_content">
-                                    <h2>Never let your memories be greater than your dreams</h2>
-                                    <p>Before long the searchlight discovered some distance away a schooner with all
-                                        sails set, apparently the same vessel which had been noticed earlier in the
-                                        evening. The wind had by this time backed to the east, and there was a shudder
-                                        amongst the watchers on </p>
-                                </div>
-                                <div class="features_under_block_img">
-                                    <img src="./img/features Apurba.jpg" alt="" width="40">
-                                    <img src="./img/features-block-2.jpg" alt="" width="40">
-                                    <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                                </div>
-                            </div>
+        <div class="container mt-5 pt-4">
+            <div class="condition">
+                <div class="row g-4 condition-responsive">
+                    <div class="col-md-4 condition-responsive2">
+                        <div class="return">
+                            <h1>RETURN & EXCHANGE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                         </div>
-                        <div class="col-md-6">
-                            <div class="features_categories">
-                                <img src="./img/features-img-right.webp" alt="">
-                                <div class="features_categories-content">
-                                    <div class="life_style">Lifestyle</div>
-                                    <h3>Self-observation is the first step of inner unfolding</h3>
-                                </div>
-                            </div>
-                            <div class="features_categories mt-4">
-                                <img src="./img/features-img-right-2.webp" alt="" height="110px">
-                                <div class="features_categories-content">
-                                    <div class="life_style">Health</div>
-                                    <h3>Self-observation is the first step of inner unfolding</h3>
-                                </div>
-                            </div>
-                            <div class="features_categories mt-4">
-                                <img src="./img/featurespost-left-3.webp" alt="">
-                                <div class="features_categories-content">
-                                    <div class="life_style">Teachnology</div>
-                                    <h3>Self-observation is the first step of inner unfolding</h3>
-                                </div>
-                            </div>
-                            <div class="features_categories mt-4">
-                                <img src="./img/featurespost-left-4.webp" alt="">
-                                <div class="features_categories-content">
-                                    <div class="life_style">Health</div>
-                                    <h3>Self-observation is the first step of inner unfolding</h3>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-md-4 condition-responsive2">
+                        <div class="shipping">
+                            <h1>RETURN & EXCHANGE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 condition-responsive2">
+                        <div class="member_discount">
+                            <h1>RETURN & EXCHANGE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!---Features page  end-->
+
+    <!-- condition page -->
 
 
-    <!---Popular Tags page  start-->
     <section>
-        <div class="popular-tag">
-            <div class="container mt-5">
-                <div class="popular_tags_heading">
-                    <h1>Popular Tags</h1>
-                </div>
-                <div class="row popular-tag_responsive pt-5 g-4">
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-1.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Inspiration</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
+        <div class="container mt-4 pt-4 pb-5">
+            <div class="what_new_heading">
+                <h1>WHAT'S NEW</h1>
+                <div class="row g-4">
+                    <div class="col-md-6 show_btn_collection">
+                        <div class="btn-group ">
+                            <button type="button" class="btn btn-dark-light categoris1">Bag's</button>
+                            <button type="button" class="btn btn-dark-light categoris1">Bags & Purses</button>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-2.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Nature</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-3.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Lifestyle</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-4.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Health</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-5.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Travel</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-6.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Food</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-7.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Teachnology</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="popular_tags_says">
-                            <a href="">
-                                <img src="./img/p-6.webp" alt="">
-                                <div class="popular_content">
-                                    <h5>Food</h5>
-                                    <p>7 Post</p>
-                                </div>
-                            </a>
+                    <div class="col-md-6 show_btn_collection">
+                        <div class="btn-group ">
+                            <button type="button" class="btn btn-dark-light categoris1">Lifestyles</button>
+                            <button type="button" class="btn btn-dark-light categoris1">Holdeals</button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-grid  pt-5">
-                <button class="btn btn-success btn-block" type="button">See all tags <i
-                        class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </div>
-    </section>
-    <!---Popular Tags page  end--->
-
-    <!---Recent post page  start--->
-    <section>
-        <div class="container-fluid pt-5">
-            <div class="recent-post_heading">
-                <h1>Recent Post</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-1.webp" alt=""" class=" img-fluid">
-                        </div>
-                        <div class="travel">Nature</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-2.webp" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Travel</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-3.webp" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Food</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-4.webp" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Lifestyle</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-5.webp" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Inspiration</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-6.webp" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Teachnology</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-77.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Food</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content mt-4">
-                        <div class="recent_post_img">
-                            <img src="./img/re.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Health</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="recent_post_content">
-                        <div class="recent_post_img">
-                            <img src="./img/recentpost-9.webp" alt="" class="img-fluid">
-                        </div>
-                        <div class="travel">Teachnology</div>
-                        <div class="recent_post_img_content">
-                            <h2>Never let your memories be greater than your dreams</h2>
-                            <p>Before long the searchlight discovered some distance away a schooner with all
-                                sails set, apparently the same vessel which had been noticed earlier in the
-                                evening. The wind had by this time backed to the east, and there was a shudder
-                                amongst the watchers on </p>
-                        </div>
-                        <div class="recent_post_under_block_img">
-                            <img src="./img/features Apurba.jpg" alt="" width="40">
-                            <img src="./img/features-block-2.jpg" alt="" width="40">
-                            <p><i class="fa-regular fa-clock"></i> 3 min read</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-grid pt-5 ff">
-                <button class="btn btn-warning recent_btn_cutomize" type="button">Load more <i
-                        class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </div>
-    </section>
-    <!---Recent post page  end--->
-
-    <!---Newsletter page  start--->
-    <section>
-        <div class="container mt-5 ">
-            <div class="newsletter_bg">
-                <div class="row g-4 newsletter ">
-                    <div class="col-lg-6 newsletter_responsive">
-                        <div class="newsletter_content">
-                            <h1>Subscribe to Porto newsletter and stay updated.</h1>
-                            <p>Don't miss anything. Get all the latest posts delivered straight to your inbox. It's
-                                free!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="newsletter_form">
-                            <form action="">
-                                <div class="row g-4">
-                                    <div class="col-sm-12  newsletter_input">
-                                        <input type="text" name="" id="" class="form-control" placeholder="Your name">
+                <div class="product_collection_new mt-5">
+                    <div class="row g-4 what_new_collection_respossive">
+                        <div class="col-md-3 show_btn_collection">
+                            <div  onmouseenter="newbtnOpen()" class="new_product_card">
+                                <a href="##"> <div class="new_col-product_img"><img id="productnewchange" src="./img/wnb-1.webp" alt=""></div>
+                                    <div class="add_card pt-2">
+                                        <div class="d-grid">
+                                            <button id="addcart" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-12 newsletter_input">
-                                        <input type="email" name="" id="" class="form-control"
-                                            placeholder="Your e-mail">
+                                    <div class="product_card_headding">
+                                        <div class="collection_num pt-3">
+                                            <p>3 color</p>
+                                            <span><img onclick="newColectionproductchange()" src="./img/wnbsub-1.webp" alt="">
+                                                <img onclick="newColectionproductchanges()"  src="./img/wnbsub-2.webp" alt="">
+                                                <img onclick="newColectionproductchanget()"  src="./img/wnbsub-3.webp" alt="">
+                                            </span>
+                                        </div>
+                                        <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                            Fashion Handbag</h3>
+                                        <div class="price">
+                                            <span>$ 3</span>
+                                            <p><del>$4</del> -36%</p>
+                                            <div class="review">
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="d-grid pt-2">
-                                        <button class="btn btn-warning " type="button">Subscribe <i
-                                                class="fa-solid fa-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                            </form>
+                                </a>
+
+                            </div>
                         </div>
+
+                             <!-- card-2 -->
+                             <div class="col-md-3 show_btn_collection">
+                                <div  onmouseenter="newbtnOpens()" class="new_product_card">
+                                    <a href="##"> <div class="new_col-product_img"><img id="productnewchangeb" src="./img/wnb-2.webp" alt=""></div>
+                                        <div class="add_card pt-2">
+                                            <div class="d-grid">
+                                                <button id="addcart1" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                            </div>
+                                        </div>
+                                        <div class="product_card_headding">
+                                            <div class="collection_num pt-3">
+                                                <p>3 color</p>
+                                                <span><img onclick="newColectionproductchangeb()" src="./img/wnbsub-2-1.webp" alt="">
+                                                    <img onclick="newColectionproductchangesbb()"  src="./img/wnbsub-2-2.webp" alt="">
+                                                    <img onclick="newColectionproductchangesbbb()"  src="./img/wnbsub-2-3.webp" alt="">
+                                                </span>
+                                            </div>
+                                            <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                                Fashion Handbag</h3>
+                                            <div class="price">
+                                                <span>$ 3</span>
+                                                <p><del>$4</del> -36%</p>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                </div>
+                            </div>
+                             <!-- card-3 -->
+                             <div class="col-md-3 show_btn_collection">
+                                <div  onmouseenter="newbtnOpenss()" class="new_product_card">
+                                    <a href="##"> <div class="new_col-product_img"><img id="productnewchangethird" src="./img/wnb-3.webp" alt=""></div>
+                                        <div class="add_card pt-2">
+                                            <div class="d-grid">
+                                                <button id="addcart2" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                            </div>
+                                        </div>
+                                        <div class="product_card_headding">
+                                            <div class="collection_num pt-3">
+                                                <p>3 color</p>
+                                                <span><img onclick="newColectionproductchangethird()" src="./img/wnbsub-3-1.webp" alt="">
+                                                    <img onclick="newColectionproductchangethirdd()"  src="./img/wnbsub-3-2.webp" alt="">
+                                                    <img onclick="newColectionproductchangethirddd()"  src="./img/wnbsub-3-3.webp" alt="">
+                                                </span>
+                                            </div>
+                                            <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                                Fashion Handbag</h3>
+                                            <div class="price">
+                                                <span>$ 3</span>
+                                                <p><del>$4</del> -36%</p>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                </div>
+                            </div>
+                             <!-- card-4 -->
+                             <div class="col-md-3 show_btn_collection">
+                                <div  onmouseenter="newbtnOpensss()" class="new_product_card">
+                                    <a href="##"> <div class="new_col-product_img"><img id="productnewchangefour" src="./img/wnb-4.webp" alt=""></div>
+                                        <div class="add_card pt-2">
+                                            <div class="d-grid">
+                                                <button id="addcart3" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                            </div>
+                                        </div>
+                                        <div class="product_card_headding">
+                                            <div class="collection_num pt-3">
+                                                <p>3 color</p>
+                                                <span><img onclick="newColectionproductchangefour()" src="./img/wnbsub-4-1.webp" alt="">
+                                                    <img onclick="newColectionproductchangefourr()"  src="./img/wnbsub-4-2.webp" alt="">
+                                                    <img onclick="newColectionproductchangefourrr()"  src="./img/wnbsub-4-3.webp" alt="">
+                                                </span>
+                                            </div>
+                                            <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                                Fashion Handbag</h3>
+                                            <div class="price">
+                                                <span>$ 3</span>
+                                                <p><del>$4</del> -36%</p>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!---Newsletter page  end--->
 
 
-    <!---Footer page  start--->
-    <footer>
-        <div class="container-fluid mt-5 pt-5 copy_right">
-            <div class="row g-4 footer_responsive">
-                <div class="col-md-6">
-                    <div class="footerlogo">
-                        <h1>Company logo</h1>
-                        <h4>Porto is a premium multipurpose Ghost theme suitable for personal, professional, magazine,
-                            brand blog and newsletter.</h4>
-                        <div class="social_link pt-4">
-                            <a href="https://www.facebook.com/amily.zahidkhan/"><i
-                                    class="fa-brands fa-facebook"></i></a>
-                            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-discord"></i></a>
-                            <a href=""><i class="fa-brands fa-telegram"></i></a>
-                            <a href=""><i class="fa-brands fa-github"></i></a>
-                        </div>
 
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="features_link">
-                        <h4>Features</h4>
-                        <li><a href="">Style Guide</a></li>
-                        <li><a href="">Tags </a></li>
-                        <li><a href="">Authers</a></li>
-                        <li><a href="">Features</a></li>
-                        <li><a href="">Contact</a></li>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="pages">
-                        <h4>Pages</h4>
-                        <li><a href="">Membership</a></li>
-                        <li><a href="">Sign in </a></li>
-                        <li><a href="">Sign up</a></li>
-                        <li><a href="">Account free</a></li>
-                        <li><a href="">Account paid</a></li>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="about">
-                        <h4>About</h4>
-                        <li><a href="">Privacy Policy</a></li>
-                        <li><a href="">Terms & Conditions</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">404 Error</a></li>
-                    </div>
-                </div>
-            </div>
-            <p class="pt-4 text-center">© zahid 2023. Published with Ghost and zahid</p>
-        </div>
-    </footer>
-    <!---Footer page  end--->
-
+    <!-- what's new arrivals page -->
 
 
 
@@ -597,6 +455,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="./main/main.js"></script>
 </body>
 
 </html>
